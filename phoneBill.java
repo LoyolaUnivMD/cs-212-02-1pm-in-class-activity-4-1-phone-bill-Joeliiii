@@ -25,6 +25,8 @@ public static void main(String[] args){
         System.out.println("What plan are you currently using?");
         String answer = question.nextLine().toLowerCase();
         double payment = 0;
+        String planused;
+
         while(!answer.equals(green.plan) && !answer.equals(blue.plan) && !answer.equals(purple.plan) ){
             System.out.println("Please choose a real plan.");
             answer = question.nextLine().toLowerCase();
@@ -44,17 +46,17 @@ public static void main(String[] args){
             } else {
                 payment = (green.cost + (gigabytes * green.additionalcost)) * months;
             }
-            System.out.println("The cost that you need to pay for the " + green.plan + " is " + payment);
+
         } else if (answer.equals(blue.plan)) {
+
             System.out.println("How many gigabytes over are you using?");
             int gigabytes = question.nextInt();
             payment = (blue.cost + (gigabytes * blue.additionalcost)) * months;
-            System.out.println("The cost you need to pay for the " + blue.plan + " is " + payment);
         } else if (answer.equals(purple.plan)){
             payment = purple.cost * months;
-            System.out.println("The cost you need to pay for the " + purple.plan + " is " + payment);
 
     }
+    System.out.println("The cost that you need to pay for the plan is " + payment);
 
 
 }
