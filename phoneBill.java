@@ -23,11 +23,11 @@ public static void main(String[] args){
         phoneBill purple = new phoneBill("purple",99.95,infinity,0,false);
         System.out.println("Hello and Welcome to the Phone Bill");
         System.out.println("What plan are you currently using?");
-        String answer = question.nextLine();
+        String answer = question.nextLine().toLowerCase();
         double payment = 0;
         while(!answer.equals(green.plan) && !answer.equals(blue.plan) && !answer.equals(purple.plan) ){
             System.out.println("Please choose a real plan.");
-            answer = question.nextLine();
+            answer = question.nextLine().toLowerCase();
         }
         System.out.println("How many months are you looking to pay?");
         int months = question.nextInt();
