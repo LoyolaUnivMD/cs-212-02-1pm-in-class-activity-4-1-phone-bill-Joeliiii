@@ -1,1 +1,26 @@
-THINK before you code...
+Create Phonebill class
+Create Phonebill constructor with callable attributes of plan, cost, gigabytes, additionalcost, and other variables
+Create a default constructor for the phonebill
+Import scanner
+create scanner to be used
+In static void:
+create 3 objects through phonebills for each plan, purple, blue, and green, with different attributes filled in
+Ask for input about which plan
+ask input for amount of months being paid for
+if plan is green:
+    use green object
+    ask input for additional GB being used
+    payment equals monthly cost + (additional gigabytes  * additional cost) * months
+    ask input for coupon
+    if they have coupon
+    subtract 20 from payment
+    print out payment
+if plan is blue:
+    use blue object
+    ask input for additional GB being used
+    payment equals monthly cost + (additional gigabytes  * additional cost) * months
+    print out payment
+if plan is purple:
+    use purple object
+    payment equals monthly cost * months
+    print out payment
