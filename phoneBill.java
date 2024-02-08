@@ -1,6 +1,8 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class phoneBill{
+    static DecimalFormat dcft = new DecimalFormat("###,###,###.##");
     private String plan;
     private double cost;
     private double gigabytes;
@@ -35,7 +37,7 @@ public static void main(String[] args){
         int months = question.nextInt();
         if(answer.equals(green.plan)){
             System.out.println("How many gigabytes over are you using?");
-            int gigabytes = question.nextInt();
+            double gigabytes = question.nextDouble();
 
             System.out.println("Do you have a coupon?");
 
@@ -50,13 +52,13 @@ public static void main(String[] args){
         } else if (answer.equals(blue.plan)) {
 
             System.out.println("How many gigabytes over are you using?");
-            int gigabytes = question.nextInt();
+            double gigabytes = question.nextDouble();
             payment = (blue.cost + (gigabytes * blue.additionalcost)) * months;
         } else if (answer.equals(purple.plan)){
             payment = purple.cost * months;
 
     }
-    System.out.println("The cost that you need to pay for the plan is " + payment);
+    System.out.println("The cost that you need to pay for the plan is " + dcft.format(payment));
 
 
 }
